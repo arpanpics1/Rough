@@ -1,1 +1,1 @@
-The DQ4QD support team is tasked with the responsibility of establishing a data model tailored to the workspace environment, mirroring the structure and configuration of the database present within the Production instance. 
+
