@@ -1,34 +1,38 @@
-Epic: Support for IDE Recon Flows on DQ4QD Platform
+Epic: Optimization and Process Improvement for DCM System
 
 Background
-All the IDE recon flows are migrated to DQ4QD platform. To ensure seamless migration and efficient operation, there is a need for comprehensive support for all migrated IDE recon flows, detailed documentation, and a streamlined onboarding process for new IDE recon flows.
+The Data Catalog Management system is essential for organizing, managing, and accessing data catalog across various platforms. To enhance its performance and usability, there is a need for overall optimization and process improvement. This epic focuses on revising the Epicenter and Zaloni processes for further optimization, creating comprehensive documentation, preparing flow and architecture diagrams, and planning test cases and test execution before moving into production.
 
 Objective
-The main objectives of this epic are to:
-Provide ongoing support for all IDE recon flows that have been migrated to the DQ4QD platform.
-Create comprehensive documentation for all migrated IDE recon flows.
-Streamline the onboarding process for new IDE recon flows related to IDE recon use cases on the DQ4QD platform.
+The primary objectives of this epic are to:
+Optimize and refine the Epicenter and Zaloni processes within the DCM system.
+Create detailed documentation for each process, including flow and architecture diagrams.
+Develop and plan test cases to ensure the system functions correctly before moving into production.
 
-User Task
-User Task 1: Support for Migrated IDE Recon Flows
-As a Data Quality Engineer, I want to ensure ongoing support for all IDE recon flows that have been migrated to the DQ4QD platform, so that these flows operate smoothly and efficiently.
+User Tasks
 
-Acceptance Criteria:
-All migrated IDE recon flows are monitored and maintained.
-Any issues with migrated flows are promptly resolved.
-Regular updates and improvements are implemented as needed.
-
-User Task 2: Comprehensive Documentation for Migrated Flows
-As a Documentation Specialist, I want to create comprehensive documentation for all IDE recon flows that have been migrated to the DQ4QD platform, so that users have clear and detailed information on each flow.
+User Task 1: Optimize and Refine Epicenter and Zaloni Processes
+I want to optimize and refine the Epicenter and Zaloni processes, so that the DCM system operates more efficiently and effectively.
 
 Acceptance Criteria:
-Documentation is created for each migrated IDE recon flow.
-Documentation includes flow descriptions, configurations, and troubleshooting guides.
+Identify and analyze current Epicenter and Zaloni processes.
+Implement optimization and refinement strategies.
+Test and validate the improvements to ensure enhanced performance.
 
-UserTask 3: Onboarding New IDE Recon Flows
-I want a streamlined process for onboarding new IDE recon flows to the DQ4QD platform, so that new flows related to IDE recon use cases can be added efficiently.
+User Task 2: Create Comprehensive Documentation
+I want to create comprehensive documentation for each process in the DCM system, so that users and administrators have clear and detailed information on system operations.
 
 Acceptance Criteria:
-A clear onboarding process is established for new IDE recon flows.
-New flows are successfully onboarded following the process.
-Documentation for new flows is created as part of the onboarding process.
+Documentation is created for each process within the DCM system.
+Flow diagrams are prepared to illustrate process workflows.
+Architecture diagrams are developed to depict system structure and interactions.
+Documentation is reviewed and approved by relevant stakeholders.
+
+User Task 3: Develop Test Cases and Plan Testing
+I want to develop test cases and plan testing for the DCM system, so that the system functions correctly and reliably before moving into production.
+
+Acceptance Criteria:
+Test cases are developed based on system requirements and processes.
+A comprehensive test plan is created, outlining testing phases and schedules.
+Testing is conducted, and results are documented.
+Any identified issues are resolved before the system moves into production.
