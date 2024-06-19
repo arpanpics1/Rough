@@ -1,37 +1,47 @@
-Epic: Enhancing DQ4QD Platform to Generate and Report File Size Distribution and Purge Statistics
+Epic: Enhancing DQ4QD Platform for Object Storage Systems and file system support
 
 Background
-The Data Quality for Quality Data (DQ4QD) platform generates various files during the processing of mismatch records and health checks. To improve monitoring and management, there is a need to generate reports that provide insights into the number and size distribution of these files. Additionally, there is a requirement to report on the health check and mismatch/bad records tables' purge statistics.
+The Data Quality for Quality Data (DQ4QD) platform currently calculates data quality metrics from various systems. To expand its capabilities, the platform needs to be enhanced to add connectors for object storage systems like HCP and to perform data quality rules on objects stored there. Additionally, the platform should be able to handle data present in Hadoop HDFS file locations and files available at Hadoop system edge nodes.
 
 Objective
-The primary objective of this epic is to enhance the DQ4QD platform by:
-Implementing functionality to generate reports on the number of files produced, categorized by file size.
-Providing reports on the number of records within these files.
-Creating purge reports for health check and mismatch/bad records tables.
+The main objectives of this epic are to:
+Integrate the DQ4QD platform with object storage systems (e.g., HCP) and Hadoop systems.
+Enable data quality rules to be performed on data stored in these systems.
+Enhance the onboarding process to include detailed configurations for file paths, credentials, and environments.
 
-User Tasks
-
-User Task 1: File Size Distribution Report
-As a Data Quality Analyst, I want to generate a report that categorizes the number of files by their size, so that I can monitor the volume and distribution of files produced by the DQ4QD platform.
-
-Acceptance Criteria:
-A report is generated that categorizes files into the following size buckets:
-0 Bytes
-0 KB - 10 KB
-10 KB - 1 MB
-1 MB - 10 MB
-10 MB - 50 MB
-50 MB - 128 MB
-Greater than 128 MB
-
-The report includes the number of files in each size bucket. and over all total no of records generated
-The report can be executed on a daily, weekly, or monthly basis as required.
-
-
-User Task 2: Health Check and Mismatch/Bad Records Purge Report
-As a DQ4QD owner, I want to generate reports on the purging of health check and mismatch/bad records tables, so that I can track the efficiency and effectiveness of data purging processes.
+User Task
+User Task 1: Object Storage System Integration
+As a Data Quality Engineer, I want to add a connector for object storage systems like HCP to the DQ4QD platform, so that I can perform data quality checks on objects stored in these systems.
 
 Acceptance Criteria:
-A report is generated showing the details of purged records from health check and mismatch/bad records tables.
-The report includes the number of records purged, the time period of the purge.
-The report can be scheduled to run on a specified frequency.
+A connector for HCP is implemented in the DQ4QD platform.
+Data quality rules can be applied to objects stored in HCP.
+The platform supports authentication and authorization mechanisms for accessing HCP.
+
+User Task 2: Hadoop Integration
+As a Data Quality Engineer, I want to add connectors for Hadoop HDFS and Hadoop edge nodes to the DQ4QD platform, so that I can perform data quality checks on data stored in these systems.
+
+Acceptance Criteria:
+Connectors for Hadoop HDFS and Hadoop edge nodes are implemented in the DQ4QD platform.
+Data quality rules can be applied to files stored in HDFS and edge nodes.
+The platform supports various file formats stored in Hadoop systems.
+
+User Task 3: Enhanced Onboarding Process
+As a System Administrator, I want an enhanced onboarding process for the DQ4QD platform, so that users can easily provide necessary details for configuring file paths, credentials, and environment-specific locations.
+
+Acceptance Criteria:
+The onboarding process includes fields for file path details (S3, HDFS, NAS/Edge node) and initial credentials for object storage.
+Users can assign a name or alias to each file system or file path.
+Users can specify the file format, delimiter, and schema.
+Users can indicate whether the file location is static or dynamic (e.g., based on partitions).
+Users can provide associated path locations for different environments (Dev, UAT, Prod).
+
+User Task 4: New Data Quality Rules
+As a Data Quality Analyst, I want to apply new types of data quality rules to the data, so that I can ensure comprehensive data quality checks.
+
+Acceptance Criteria:
+Implement a File Watcher rule that checks for file existence based on a pattern and specified intervals.
+Implement a File Size rule to check if the file size is zero or matches a user-specified size.
+Implement a rule to check the file schema against a predefined schema.
+Implement a File Format Check rule to validate file formats such as CSV, JSON, Parquet, ORC, Avro, TXT, and Protobuf.
+Ensure that existing rules (standard rules, table recon, lookup) are supported for the new data sources.
