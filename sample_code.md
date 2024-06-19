@@ -1,35 +1,53 @@
-Epic: Vault process integration and implementation for DQ4QD platform 
+Epic: Support and Maintenance for DQ4QD Platform
 
 Background
-DQ4QD platform currently manages various system credentials that are essential for its operations. To enhance security and ensure compliance with best practices, there is a need to implement credential vaulting for all system credentials, including BEM service IDs and Oracle system credentials for all environments. This epic involves making necessary code changes, informing the BEM team, and developing a strategic plan for vaulting credentials during the onboarding process.
+The Data Quality for Quality Data (DQ4QD) platform is critical for ensuring data quality across various lines of business. To maintain its reliability and effectiveness, ongoing support and maintenance are essential. This epic addresses the need for comprehensive support for the DQ4QD platform, including workspace environment support, bug fixes, code implementation, documentation and process improvement, onboarding support, and assistance with migrating workflows and pipelines from lower environments to production.
 
 Objective
-The main objectives of this epic are to:
-Vault BEM service IDs and notify the BEM team.
-Vault Oracle system credentials for all environments.
-Implement a strategic plan to vault any system credential during the onboarding process for new systems on the DQ4QD platform.
+The primary objectives of this epic are to:
+Provide support for DQ4QD workspace environments, including Development (Dev) and System Integration Testing (SIT) environments for different lines of business.
+Implement bug fixes and necessary code changes.
+Improve documentation and processes.
+Support the onboarding process for new users and systems.
+Assist in migrating workflows and pipelines from lower environments to production.
 
-User Stories
-User Story 1: Vault BEM Service ID
-As a BEM AIF Owner, I want to vault the BEM service ID, so that the credential is securely stored and managed.
-
-Acceptance Criteria:
-The BEM service ID is securely vaulted.
-Notifications are sent to the BEM team informing them of the vaulting process and any changes required on their end.
-The DQ4QD platform is updated to use the vaulted BEM service ID.
-
-User Story 2: Vault Oracle System Credentials
-As a DQ4QD platform owner, I want to vault Oracle system credentials for all environments (Dev, UAT, Prod), so that they are securely stored and managed.
+User Task
+User Task 1: Support for DQ4QD Workspace and LLE Environments
+As a Data Quality Engineer, I want support for DQ4QD workspace environments, Dev and SIT, so that I can ensure smooth development and testing processes for different lines of business.
 
 Acceptance Criteria:
-Oracle system credentials for all environments are securely vaulted.
-The DQ4QD platform is updated to use the vaulted Oracle system credentials.
-The change is documented and communicated.
+The Dev and SIT environments are maintained and supported for all lines of business.
+Issues in these environments are resolved promptly.
+Regular updates and maintenance activities are performed to ensure environment stability.
 
-User Story 3: Strategic Plan for Vaulting New System Credentials
-As a System user, I want a strategic plan for vaulting any new system credential during the onboarding process, so that credentials are securely stored from the beginning.
+User Task 2: Bug Fixes and Code Implementation
+As a System Administrator, I want bug fixes and code implementations to be carried out efficiently, so that the DQ4QD platform functions smoothly and any issues are resolved quickly.
 
 Acceptance Criteria:
-Develop a strategic plan and process for vaulting new system credentials during onboarding.
-The onboarding process is updated to include steps for credential vaulting.
-Documentation is updated to reflect the new process.
+Bugs reported in the DQ4QD platform are logged and tracked.
+Bug fixes are implemented and tested.
+Code changes are deployed to the appropriate environments.
+
+User Task 3: Documentation and Process Improvement
+As a Platform User, I want improved documentation and streamlined processes, so that I can understand and use the DQ4QD platform more effectively.
+
+Acceptance Criteria:
+Existing documentation is reviewed and updated.
+New documentation is created for any new features or processes.
+Processes are evaluated and improved for efficiency and clarity.
+
+User Task 4: Support for Onboarding Process
+As a New User, I want support during the onboarding process, so that I can start using the DQ4QD platform effectively.
+
+Acceptance Criteria:
+New users receive guidance and support during the onboarding process.
+Onboarding materials and resources are provided.
+Any issues encountered during onboarding are promptly resolved.
+
+User Story 5: Migrating Workflows and Pipelines from Lower Environments to Production
+As a Data Quality Engineer, I want support for migrating workflows and pipelines from lower environments Workspace --> Dev --> SIT --> UAT to production, so that my work can be deployed and used in the production environment.
+
+Acceptance Criteria:
+A clear process for migrating workflows and pipelines is established.
+Support is provided for migration activities.
+Migration is performed with minimal downtime and disruption.
