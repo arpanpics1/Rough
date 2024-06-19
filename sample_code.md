@@ -46,7 +46,56 @@ Test results are documented, and issues are resolved promptly.
 User Task 5: Prepare Documentation and Training Material
 I want to prepare detailed documentation and training materials, so that users and administrators can understand and effectively use the system.
 
+
+
+=========
+
+
+
+
+Epic: Optimization and Process Improvement for DCM System
+Background
+The Data Catalog Management (DCM) system plays a crucial role in organizing and managing metadata across the enterprise. To enhance its efficiency and security, this epic focuses on optimizing and refining the Epicenter and Zaloni processes, improving documentation, planning and executing test cases, and incorporating credential vaulting.
+
+Objective
+The main objectives of this epic are to:
+
+Optimize and refine the Epicenter and Zaloni processes within the DCM system.
+Create comprehensive documentation for each process, including flow and architecture diagrams.
+Develop and execute test cases and test plans before moving changes into production.
+Implement vaulting for all DCM system credentials.
+User Stories
+User Story 1: Optimize Epicenter and Zaloni Processes
+As a Data Management Specialist, I want to optimize and refine the Epicenter and Zaloni processes, so that the DCM system operates more efficiently and effectively.
+
 Acceptance Criteria:
-Comprehensive documentation is created for all system features and processes.
-Training materials are prepared to assist users and administrators.
-Documentation and training materials are reviewed and approved by relevant stakeholders.
+
+Analyze current Epicenter and Zaloni processes to identify areas for optimization.
+Implement changes to enhance performance and efficiency.
+Validate improvements through performance testing and user feedback.
+User Story 2: Comprehensive Documentation and Diagrams
+As a Documentation Specialist, I want to create comprehensive documentation for each process within the DCM system, so that users and stakeholders have a clear understanding of workflows and system architecture.
+
+Acceptance Criteria:
+
+Document each process within the DCM system.
+Create detailed flow diagrams for processes and architecture diagrams for the overall system.
+Review and approve documentation with relevant stakeholders.
+User Story 3: Test Cases and Test Planning
+As a Quality Assurance Engineer, I want to develop and execute test cases and test plans, so that changes to the DCM system are thoroughly validated before production deployment.
+
+Acceptance Criteria:
+
+Develop test cases for each optimized process.
+Create a comprehensive test plan covering all aspects of the system.
+Execute test cases and document results.
+Ensure all tests are passed before moving changes into production.
+User Story 4: Vaulting DCM System Credentials
+As a Security Administrator, I want to incorporate vaulting for all DCM system credentials, so that credentials are securely stored and managed.
+
+Acceptance Criteria:
+
+Identify all credentials used in the DCM system.
+Migrate credentials to a secure vault.
+Update the DCM system to use vaulted credentials.
+Validate that all processes work correctly with the vaulted credentials.
