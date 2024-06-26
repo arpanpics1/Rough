@@ -1,1 +1,7 @@
-DQ4QD is a comprehensive data quality platform designed to empower users with the tools needed to ensure the integrity and reliability of their data. The platform offers a user-friendly interface that allows users to define custom data quality rules, leverage existing rules, and apply them to their datasets. The core functionality of DQ4QD is driven by a robust engine that utilizes PySpark jobs for efficient rule execution and KPI calculation. 
+The workflow feature provides an intuitive canvas where users can easily drag and drop tables and rules, which are then stored in the DQ4QD database. This forms the fundamental unit of the DQ4QD platform for executing data quality checks. Users have multiple options for executing workflows, ensuring flexibility and efficiency in maintaining data quality.
+
+
+
+
+
+
