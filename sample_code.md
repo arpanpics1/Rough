@@ -35,3 +35,43 @@ We are working with the Partner team to integrate data retention details into th
 We are collaborating with various teams and LOBs to showcase our strategy and capabilities on the Data Catalog system. This involves presenting our data cataloging approach, demonstrating key features, and illustrating how our system can improve data discovery, metadata management, and overall data governance. Our goal is to drive adoption and maximize the value derived from our Data Catalog system.
 
 We have partnered with Tech executives to provide detailed knowledge on the SDP (Strategic Data Platform) and to facilitate knowledge sharing and adoption of the DQ4QD and DCM tools. This partnership includes organizing training sessions, creating informative resources, and fostering a culture of continuous learning and innovation to ensure that all stakeholders are well-versed in the capabilities and benefits of these tools.
+
+
+====
+
+We have initiated a proof of concept (POC) to perform data quality checks on Kafka consumer streaming data. This involves real-time monitoring and validation to ensure data integrity and accuracy in streaming environments.
+
+I participated in the latest innovation forums, where I submitted two ideas aimed at enhancing our data quality processes and tools.
+
+Collaborated with multiple teams during the creation of the DQ4QD platform, capturing various requirements and incorporating these features into the platform to meet diverse business needs.
+
+We have automated several aspects of the DQ4QD platform, making it a self-service solution to drive business efficiency and reduce manual intervention.
+
+We have significantly improved the user and developer experience on the DQ4QD platform by enhancing its interface, usability, and overall functionality.
+
+
+======
+
+We have built proactive monitoring dashboards for the consumer platform, generating reports and establishing various alerting systems for the DQ4QD platform. These enhancements ensure real-time visibility and prompt notifications for potential issues, significantly improving system reliability.
+
+We have ensured that platform availability and performance are reliable by reviewing and optimizing the architecture to meet RTO (Recovery Time Objective) and RPO (Recovery Point Objective) requirements for the DQ4QD system.
+
+We have consistently maintained a zero data loss data movement streaming platform that synchronizes data from Kafka to HDFS. We have added multiple connectors, such as RDBMS systems, to enhance data integration and reliability.
+
+We have constantly maintained the platform availability for Kafka consumers, DCM, and DQ4QD, ensuring seamless and uninterrupted service for all users.
+
+We are working towards building features for a user support ticketing and issue resolution system for the DQ4QD platform. This system will streamline support processes, improve response times, and enhance overall user satisfaction.
+
+
+========
+
+
+We have migrated the Databank to the DCM system and are actively working to drive user adoption.
+We are in the process of migrating Tier 0/1 EEH Platform consumers to RHEL 9 bootstrap servers.
+We are building the DQ4QD BAU team and operating model, and developing a multi-tenancy system for data quality.
+We are upgrading all applications in BEM and AMO to Spark 3.
+We have resolved numerous bugs on the DQ4QD platform to enhance user support and experience.
+
+
+
+
