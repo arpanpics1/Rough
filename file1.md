@@ -166,3 +166,40 @@ This Epic focuses on enhancing the existing Kafka Consumer Framework to improve 
   - Establish documentation standards and guidelines.
   - Assign ownership for documentation updates as part of the development process.
   - Schedule regular reviews to keep documentation current with system changes.
+ 
+
+
+==============================
+
+**Epic Name**: **Kafka Consumer Framework Modernization and Support**
+
+---
+
+**Acceptance Criteria:**
+
+1. **EEH Consumer UI Enhancement, Client Onboarding, and Support**
+   - **Acceptance Criteria**: The upgraded EEH Consumer UI is deployed, enabling seamless client onboarding and support, verified by the successful onboarding of new clients without any issues.
+
+2. **Consumer Framework Integration with Apache Ozone with Fault Tolerance**
+   - **Acceptance Criteria**: The consumer framework is integrated with Apache Ozone, incorporating fault tolerance features, and passes all tests demonstrating uninterrupted data processing during simulated failures.
+
+3. **Backup Sync Support Utility in Case of HDFS Unavailability to Ozone Layer**
+   - **Acceptance Criteria**: A backup synchronization utility is developed and operational, ensuring automatic data failover to the Ozone layer when HDFS becomes unavailable.
+
+4. **Consumer Upgrade from RHEL 7 to RHEL 9 on Production**
+   - **Acceptance Criteria**: All consumer applications are successfully upgraded and running smoothly on RHEL 9 in the production environment, with no critical issues reported post-migration.
+
+5. **ARC Testing in Production for Tier 0 and Tier 2 Consumer Framework**
+   - **Acceptance Criteria**: ARC testing is completed in the production environment for Tier 0 and Tier 2 consumer frameworks, with all critical test cases passing successfully according to predefined standards.
+
+6. **POC on Real-Time Fraud Analytics to Detect Malicious Activity**
+   - **Acceptance Criteria**: A proof of concept is developed demonstrating the capability to detect and alert on real-time fraudulent or malicious activities within acceptable performance metrics.
+
+7. **Dummy Producer and Consumer Application for Varying Data Volumes**
+   - **Acceptance Criteria**: Dummy producer and consumer applications capable of generating and handling small, medium, and heavy data volumes are created and validated through performance and stress testing.
+
+8. **Internal Report Generation on Records and File Sizes**
+   - **Acceptance Criteria**: An internal reporting tool is implemented that generates reports on the number of records and files produced, categorized by size buckets, verified by sample reports.
+
+9. **Documentation and Improved Flow Diagrams**
+   - **Acceptance Criteria**: Comprehensive documentation and updated flow diagrams are completed and reviewed, providing clear guidance and visual representation of the enhanced framework.
