@@ -1,59 +1,124 @@
-### Epic: Integration of Data Catalog Management System (DCM) with Data Quality System (DQ4QD)
+### Epic: Integration of DQD Greenzone AIF into DQ4QD Workspace Environment
 
-#### **Epic Title**: Seamless Metadata Integration Between DCM and DQ4QD Systems
+#### **Epic Title**: Multitenant Greenzone AIF Integration for Efficient Tenant Onboarding in DQ4QD
 
-#### **Epic Description**:  
-This epic aims to integrate the Data Catalog Management (DCM) system, which harvests metadata from various systems, with the Data Quality system (DQ4QD) to streamline the process of capturing table and column metadata for quality assessments. The integration will allow the DQ4QD system to directly utilize the harvested metadata from DCM, eliminating the need for manual entry and enhancing the efficiency of the data quality processes. Two approaches are proposed: a pull-based metadata sync and a full system merger.
+#### **Epic Description**:
+This epic aims to integrate the new DQD Greenzone Application Integration Framework (AIF) into the existing DQ4QD platform's workspace environment. Currently, the DQ4QD platform utilizes the `gza_009_uwa` Greenzone environment, primarily used by the Fraud Tech team. Onboarding a new tenant requires setting up a separate greenzone environment for each, which is both time-consuming and costly. By integrating the multitenancy capabilities of the DID AIF—which includes multitenant databases and service_id setups—we can assign individual Hive databases to each tenant within a single greenzone environment. This integration will streamline the onboarding process, reduce costs, and provide a seamless user experience while ensuring data isolation and security between tenants.
 
 #### **Objectives**:
-- Automate the flow of metadata between DCM and DQ4QD.
-- Ensure seamless synchronization of table and column information for quality checks.
-- Minimize the need for manual metadata entry by leveraging harvested data.
-- Preserve data consistency and integrity, particularly when generating or updating metadata IDs.
-- Enhance the user experience by making metadata readily available when adding new tables to the DQ4QD system.
 
-#### **Approach 1: Pull Metadata from DCM on Demand (Pull-Based)**
+- **Streamline Tenant Onboarding**: Reduce the complexity and cost of onboarding new tenants by leveraging the multitenancy features of DQD Greenzone AIF.
+- **Ensure Data Isolation and Security**: Implement strict access controls so that each tenant can only access their assigned Hive database.
+- **Maintain Existing Functionality**: Ensure that the current operations of the Fraud Tech team and other existing users are not disrupted.
+- **Enhance User Experience**: Provide a seamless and consistent experience for users applying data quality rules on production data.
 
-1. **Story 1**: Metadata Sync Feature for DQ4QD
-   - As a user, I want to pull the metadata of tables and columns from the DCM system directly into DQ4QD when I add a new table so that I can avoid manual entry.
+#### **User Stories**:
+
+1. **Story 1: Simplified Tenant Onboarding Process**
+
+   - **As a** System Administrator
+   - **I want to** onboard new tenants without setting up separate greenzone environments
+   - **So that** I can reduce setup time and operational costs
    - **Acceptance Criteria**:
-     - Metadata sync should be triggered upon adding a new table in DQ4QD.
-     - Unique IDs should be generated for tables and columns in DQ4QD, separate from the DCM system.
-     - Users should be notified of successful metadata import.
+     - New tenants can be added by assigning them a Hive database within the existing greenzone environment.
+     - The system allows for quick configuration of tenant-specific settings.
+     - Documentation is updated to reflect the new onboarding process.
 
-2. **Story 2**: Background Sync Process for Metadata Changes
-   - As a user, I want the metadata in DQ4QD to be automatically updated when changes are made to the harvested metadata in DCM.
+2. **Story 2: Tenant-Specific Hive Database Access**
+
+   - **As a** Tenant User
+   - **I want to** access only my assigned Hive database
+   - **So that** I can ensure the confidentiality and integrity of my data
    - **Acceptance Criteria**:
-     - Automatic updates should reflect changes made in DCM for tables and columns.
-     - Conflict resolution rules should be defined when changes in metadata require user input.
+     - Tenants are restricted to their assigned Hive databases via service_id setups.
+     - Access attempts to other databases are denied and logged.
+     - Users can apply data quality rules without interference from other tenants.
 
-#### **Approach 2: Full System Integration (Merging)**
+3. **Story 3: Integration of DQD Greenzone AIF with DQ4QD**
 
-3. **Story 3**: Metadata ID Unification
-   - As a user, I want DQ4QD and DCM to share the same IDs for tables and columns so that metadata is consistent across both systems.
+   - **As a** Developer
+   - **I need to** integrate the DQD Greenzone AIF into the DQ4QD workspace environment
+   - **So that** the platform supports multitenancy features
    - **Acceptance Criteria**:
-     - Existing metadata IDs in both systems should be mapped and unified.
-     - A migration script should update historical records in DQ4QD to reflect DCM IDs.
-     - New tables and columns should have synchronized IDs across both systems.
+     - The DQD Greenzone AIF is successfully integrated without affecting existing functionalities.
+     - The system supports multitenant configurations and operations.
+     - Integration is tested and validated in a staging environment before production deployment.
 
-4. **Story 4**: Historical Data Migration
-   - As a developer, I need to migrate the historical metadata stored in DQ4QD to align with the DCM system so that all metadata IDs are consistent across both platforms.
+4. **Story 4: Seamless User Experience**
+
+   - **As a** Tenant User
+   - **I want** a seamless experience when applying data quality rules
+   - **So that** I can focus on data quality analysis without dealing with technical complexities
    - **Acceptance Criteria**:
-     - Historical metadata should be accurately migrated without data loss.
-     - All references to old IDs should be updated across the entire system, including reports and dashboards.
-     - Backward compatibility should be maintained for any system integrations dependent on the old ID format.
+     - The user interface remains intuitive and consistent.
+     - Users can easily navigate to their workspace and apply rules.
+     - Performance meets or exceeds current standards.
+
+5. **Story 5: Security and Compliance Assurance**
+
+   - **As a** Security Officer
+   - **I want to** ensure that multitenancy does not compromise data security
+   - **So that** we remain compliant with data protection regulations
+   - **Acceptance Criteria**:
+     - Security protocols are updated to include multitenant considerations.
+     - Regular security audits are conducted to verify data isolation.
+     - Compliance documentation is updated accordingly.
 
 #### **Non-Functional Requirements**:
-- Ensure that the integration does not introduce performance bottlenecks during metadata syncs.
-- Maintain backward compatibility for systems relying on the current metadata structure in DQ4QD.
-- Provide audit logs for metadata updates and sync operations.
+
+- **Performance**: The system should handle multiple tenants without significant degradation in response times.
+- **Scalability**: The architecture must support the addition of numerous tenants in the future.
+- **Security**: Robust authentication and authorization mechanisms must be in place to prevent unauthorized access.
+- **Reliability**: The system should maintain high availability, with minimal downtime during integration.
+- **Usability**: The user interface should remain user-friendly despite the added complexity of multitenancy.
 
 #### **Dependencies**:
-- Access to DCM’s API for metadata extraction.
-- Collaboration between the teams managing DCM and DQ4QD to define a consistent ID scheme.
-  
-#### **Risks**:
-- Changing metadata IDs in both systems could lead to inconsistencies if not carefully planned.
-- Performance impacts during large metadata sync operations.
 
-This epic will lay the foundation for an efficient metadata integration between the DCM and DQ4QD systems, providing flexibility for users to utilize harvested metadata directly or merge both systems for a unified experience.
+- **DID AIF Availability**: The DQD Greenzone AIF with multitenancy features must be fully developed and tested.
+- **Access Control Mechanisms**: Implementation of service_id setups for tenant isolation.
+- **Collaboration with Fraud Tech Team**: Coordination to ensure their operations remain unaffected.
+- **Infrastructure Support**: Adequate resources (e.g., storage, processing power) to support multiple tenants.
+
+#### **Risks**:
+
+- **Data Leakage Risk**: Improper isolation might lead to tenants accessing each other's data.
+  - *Mitigation*: Implement strict access controls and conduct thorough security testing.
+- **Integration Challenges**: Potential technical issues during the integration of AIF with DQ4QD.
+  - *Mitigation*: Utilize a phased integration approach with testing at each stage.
+- **Performance Bottlenecks**: Adding multiple tenants might affect system performance.
+  - *Mitigation*: Optimize queries and resource allocation; monitor performance metrics.
+- **User Adaptation**: Users may face a learning curve with the new system changes.
+  - *Mitigation*: Provide training sessions and update user guides.
+
+#### **Timeline**:
+
+1. **Phase 1: Planning and Requirements Gathering (2 Weeks)**
+   - Finalize requirements and scope.
+   - Engage stakeholders and gather feedback.
+
+2. **Phase 2: Development and Integration (4 Weeks)**
+   - Integrate DQD Greenzone AIF into DQ4QD.
+   - Implement multitenancy features and access controls.
+
+3. **Phase 3: Testing (3 Weeks)**
+   - Conduct unit, integration, and security testing.
+   - Perform user acceptance testing with select tenants.
+
+4. **Phase 4: Deployment (1 Week)**
+   - Roll out the integrated system to production.
+   - Monitor system performance and resolve any issues.
+
+5. **Phase 5: Training and Documentation (1 Week)**
+   - Update documentation and user manuals.
+   - Provide training sessions for administrators and users.
+
+#### **Success Metrics**:
+
+- **Reduction in Onboarding Time**: Measure the decrease in time required to onboard a new tenant.
+- **Cost Savings**: Calculate the reduction in costs associated with setting up new greenzone environments.
+- **User Satisfaction**: Gather feedback from tenants on the onboarding process and usability.
+- **Security Compliance**: Achieve successful security audit results post-integration.
+
+---
+
+By integrating the DQD Greenzone AIF into the DQ4QD workspace environment, we aim to enhance efficiency, reduce costs, and provide a scalable solution for tenant onboarding. This epic ensures that the platform remains secure, user-friendly, and capable of supporting future growth.
