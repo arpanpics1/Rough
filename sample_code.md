@@ -21,3 +21,9 @@ INSERT INTO my_table (name) VALUES ('Jane Smith');
 -- Inserting more records
 INSERT INTO my_table (name) VALUES ('Alice Johnson');
 INSERT INTO my_table (name) VALUES ('Bob Brown');
+
+
+CREATE TABLE my_table (
+    id VARCHAR2(20) DEFAULT '85' || TO_CHAR(SEQ_MY_TABLE.NEXTVAL),  -- VARCHAR2 instead of NUMBER
+    name VARCHAR2(100)
+);
