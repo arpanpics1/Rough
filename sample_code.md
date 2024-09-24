@@ -12,3 +12,12 @@ CREATE TABLE my_table (
     id_with_prefix AS (TO_NUMBER('85' || TO_CHAR(id))) VIRTUAL
 );
 
+
+INSERT INTO my_table (name) VALUES ('John Doe');
+
+-- Inserting another record with a different name
+INSERT INTO my_table (name) VALUES ('Jane Smith');
+
+-- Inserting more records
+INSERT INTO my_table (name) VALUES ('Alice Johnson');
+INSERT INTO my_table (name) VALUES ('Bob Brown');
