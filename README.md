@@ -1,9 +1,52 @@
-We are seeking assistance from your team regarding the NDM process that transfers files from the Epic Center to the DCM server. We have been following up on this issue for almost two months, but unfortunately, the team is still unsure about the process and how to resolve it.
+from pyspark.sql import SparkSession
+from pyspark.sql.utils import AnalysisException
 
-We require your intervention in this matter. In our last conversation with Mahesh, he mentioned that he does not have the expertise to troubleshoot the Python script responsible for moving the files and is not aware of any team that can assist us.
+def create_spark_session():
+    """Create a Spark session."""
+    try:
+        spark = SparkSession.builder \
+            .appName("SQL Server Connection") \
+            .config("spark.driver.extraClassPath", "path/to/sqljdbc4.jar") \
+            .getOrCreate()
+        print("Spark session created successfully.")
+        return spark
+    except Exception as e:
+        print(f"Error creating Spark session: {e}")
+        return None
 
-Please let us know how we can proceed. This issue has become a blocker for our development process, as we will not be able to onboard any tenants until the process is fixed.
+def connect_to_sql_server(spark, jdbc_url, properties):
+    """Connect to SQL Server and read data from a table."""
+    try:
+        df = spark.read.jdbc(url=jdbc_url, table="your_table_name", properties=properties)
+        print("Data read successfully.")
+        return df
+    except AnalysisException as ae:
+        print(f"Analysis error: {ae}")
+    except Exception as e:
+        print(f"Error connecting to SQL Server: {e}")
+        return None
 
-Thank you for your prompt attention to this matter.
+def main():
+    # JDBC URL for SQL Server
+    jdbc_url = "jdbc:sqlserver://<server_name>:<port>;databaseName=<database_name>"
+    
+    # Properties for the connection
+    properties = {
+        "user": "<username>",
+        "password": "<password>",
+        "driver": "com.microsoft.sqlserver.jdbc.SQLServerDriver"
+    }
 
+    # Create Spark session
+    spark = create_spark_session()
+    
+    if spark:
+        # Connect to SQL Server
+        df = connect_to_sql_server(spark, jdbc_url, properties)
+        
+        if df is not None:
+            # Show the DataFrame (for demonstration purposes)
+            df.show()
 
+if __name__ == "__main__":
+    main()
