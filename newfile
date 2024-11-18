@@ -1,0 +1,152 @@
+Here are some **handy and essential VS Code commands** that every Python developer should know to enhance productivity and streamline workflows:
+
+---
+
+### **1. General VS Code Navigation**
+- **Open Command Palette**: `Ctrl+Shift+P` / `Cmd+Shift+P`  
+  - Access almost all commands and extensions in VS Code.
+  
+- **Open File**: `Ctrl+P` / `Cmd+P`  
+  - Quickly open files by typing their name.
+
+- **Navigate to Symbol in Workspace**: `Ctrl+T` / `Cmd+T`  
+  - Jump to a function, class, or variable in your workspace.
+
+- **Split Editor**: `Ctrl+\` / `Cmd+\`  
+  - Split the editor view to compare code side-by-side.
+
+---
+
+### **2. Python-Specific Commands**
+- **Run Python File**: `Ctrl+F5`  
+  - Runs the current Python script.
+
+- **Run Selection/Line in Terminal**: `Shift+Enter`  
+  - Execute the selected code in the terminal.
+
+- **Open Integrated Terminal**: `Ctrl+` / `Cmd+`  
+  - Opens a terminal at the project’s root directory.
+
+- **Lint Code**: `Ctrl+Shift+P` > Select `Run Linter`  
+  - Run the configured linter (e.g., `pylint`, `flake8`) on your code.
+
+- **Format Document**: `Shift+Alt+F` / `Shift+Option+F`  
+  - Format your Python code using the configured formatter (e.g., `black`, `autopep8`).
+
+- **Debug Python File**: `F5`  
+  - Start debugging the current Python script.
+
+- **Show Python Interactive Window**: `Shift+Alt+P` / `Shift+Option+P`  
+  - Open the interactive window for running Python code interactively.
+
+- **Install a Python Module**: `Ctrl+Shift+P` > Select `Python: Install Package`  
+  - Install Python modules directly from VS Code.
+
+---
+
+### **3. Git Commands**
+- **View Git Changes**: `Ctrl+Shift+G` / `Cmd+Shift+G`  
+  - Open the Source Control view to see changes.
+
+- **Commit Changes**: `Ctrl+Enter`  
+  - Commit staged changes in the Source Control view.
+
+- **Open Git Log**: `Ctrl+Shift+P` > Select `Git: View History`  
+  - View commit history.
+
+- **Stage All Changes**: `Ctrl+Shift+A`  
+  - Stage all modified files for a commit.
+
+---
+
+### **4. Code Navigation**
+- **Go to Definition**: `F12`  
+  - Navigate to the definition of a variable, function, or class.
+
+- **Peek Definition**: `Alt+F12` / `Option+F12`  
+  - Preview a definition inline without leaving your current file.
+
+- **Find References**: `Shift+F12`  
+  - Find all references to a variable, function, or class.
+
+- **Go to Line/Column**: `Ctrl+G` / `Cmd+G`  
+  - Jump to a specific line or column.
+
+---
+
+### **5. Search and Replace**
+- **Find in File**: `Ctrl+F` / `Cmd+F`  
+  - Search within the current file.
+
+- **Find in Workspace**: `Ctrl+Shift+F` / `Cmd+Shift+F`  
+  - Search across all files in the workspace.
+
+- **Replace**: `Ctrl+H` / `Cmd+H`  
+  - Find and replace text in the current file.
+
+---
+
+### **6. Debugging Commands**
+- **Step Into**: `F11`  
+  - Step into a function during debugging.
+
+- **Step Over**: `F10`  
+  - Step over the current function during debugging.
+
+- **Step Out**: `Shift+F11`  
+  - Step out of the current function during debugging.
+
+- **Toggle Breakpoint**: `F9`  
+  - Add or remove a breakpoint on the current line.
+
+- **Continue Debugging**: `F5`  
+  - Resume execution until the next breakpoint.
+
+---
+
+### **7. Workspace Customization**
+- **Open Settings**: `Ctrl+,` / `Cmd+,`  
+  - Open the settings menu to customize VS Code.
+
+- **Open Workspace Settings**: `Ctrl+Shift+P` > Select `Preferences: Open Workspace Settings`  
+  - Set project-specific configurations.
+
+- **Toggle Sidebar Visibility**: `Ctrl+B` / `Cmd+B`  
+  - Show or hide the sidebar.
+
+---
+
+### **8. Extensions and Extensions Management**
+- **Open Extensions View**: `Ctrl+Shift+X` / `Cmd+Shift+X`  
+  - Manage installed extensions.
+
+- **Install Extension**: `Ctrl+Shift+P` > Select `Extensions: Install Extension`  
+  - Search and install extensions.
+
+---
+
+### **9. Snippets and IntelliSense**
+- **Trigger Suggestions**: `Ctrl+Space` / `Cmd+Space`  
+  - Activate IntelliSense suggestions for code completion.
+
+- **Insert Snippet**: `Ctrl+Shift+P` > Select `Insert Snippet`  
+  - Insert predefined or custom code snippets.
+
+---
+
+### **10. Other Handy Commands**
+- **Toggle Word Wrap**: `Alt+Z` / `Option+Z`  
+  - Enable/disable word wrap in the editor.
+
+- **Close Editor/Tab**: `Ctrl+W` / `Cmd+W`  
+  - Close the current editor tab.
+
+- **Cycle Through Open Editors**: `Ctrl+Tab` / `Cmd+Tab`  
+  - Switch between open files.
+
+- **Zoom In/Out**: `Ctrl+=` / `Ctrl+-` (`Cmd+=` / `Cmd+-`)  
+  - Adjust the editor font size.
+
+---
+
+These commands will help you work efficiently in Python development and take full advantage of VS Code's features.
