@@ -26,3 +26,75 @@ Here’s a table listing important **Apache Ozone commands** with the specified 
 | **Filesystem**      | Deletes a file or directory in the Ozone filesystem.       | `ozone fs -rm [path]`                    |
 
 Let me know if you want to add more commands or refine the table!
+
+
+Here are additional **important commands** in Apache Ozone to manage and retrieve information about the **Ozone Manager (OM)**, **Storage Container Manager (SCM)**, and the overall cluster:
+
+---
+
+| **Type of Command** | **What the Command Does**                                      | **Command**                              |
+|----------------------|---------------------------------------------------------------|------------------------------------------|
+| **OM**              | Retrieves details of the Ozone Manager (OM) service.          | `ozone admin om getserviceroles`         |
+| **OM**              | Lists all Ozone Manager nodes in the cluster.                 | `ozone admin om list`                    |
+| **SCM**             | Retrieves the status of the Storage Container Manager (SCM).  | `ozone admin scm status`                 |
+| **SCM**             | Lists all SCM nodes in the cluster.                           | `ozone admin scm list`                   |
+| **SCM**             | Retrieves the service roles of SCM (leader, follower, etc.).  | `ozone admin scm getserviceroles`        |
+| **Cluster**         | Displays the overall health and status of the cluster.        | `ozone admin cluster-summary`            |
+| **Cluster**         | Lists all nodes in the cluster (OM, SCM, Datanodes).          | `ozone admin node list`                  |
+| **Cluster**         | Displays information about pipelines (used for containers).   | `ozone admin pipeline list`              |
+| **Safe Mode**       | Checks the current Safe Mode status of the cluster.           | `ozone admin safemode status`            |
+| **Safe Mode**       | Exits the cluster from Safe Mode.                             | `ozone admin safemode leave`             |
+| **Datanode**        | Lists all registered Datanodes in the cluster.                | `ozone admin datanode list`              |
+| **Datanode**        | Displays detailed info about a specific Datanode.             | `ozone admin datanode info [node_id]`    |
+| **Ratis (Replication)** | Displays Ratis group info for replication.                  | `ozone admin ratis list`                 |
+| **Logs**            | Retrieves logs for debugging the Ozone services.              | `ozone admin logs get [log_file_name]`   |
+| **Configuration**   | Displays all configuration settings of Ozone.                 | `ozone admin config list`                |
+| **Quota**           | Displays quota usage of a volume or bucket.                   | `ozone admin quota get [volume/bucket]`  |
+| **Audit**           | Displays audit logs for tracking user operations.             | `ozone admin audit log`                  |
+
+---
+
+### **Other Helpful Commands**
+#### **General Troubleshooting**
+- **Verify Ozone Services**:
+  ```bash
+  ozone admin om status
+  ozone admin scm status
+  ```
+- **Restart a Service**:
+  ```bash
+  ozone daemon restart om
+  ozone daemon restart scm
+  ```
+- **Stop a Service**:
+  ```bash
+  ozone daemon stop om
+  ozone daemon stop scm
+  ```
+
+#### **Key Management Commands**
+- **Rename a Key**:
+  ```bash
+  ozone sh key rename /volume_name/bucket_name/key_name /new_key_name
+  ```
+
+#### **Cluster Administration**
+- **Force a Leader Election** (for OM or SCM):
+  ```bash
+  ozone admin om re-election
+  ozone admin scm re-election
+  ```
+
+- **List All Containers**:
+  ```bash
+  ozone admin container list
+  ```
+
+---
+
+### **Recommended Usage**
+- Use **`ozone admin cluster-summary`** frequently to monitor the cluster's overall health.
+- Use **`ozone admin safemode status`** during startup to ensure the cluster exits Safe Mode properly.
+- Use **`ozone admin audit log`** to debug any user-related operations for compliance or troubleshooting.
+
+If you need help with specific scenarios or additional commands, let me know!
