@@ -1,0 +1,56 @@
+At the start of the year, we collaborated closely with Fraud Tech and CRH to elevate the Line of Business (LOB) experience on the DQ4QD platform. Building on that momentum, we subsequently partnered with 11 additional clients, working to understand their unique requirements and challenges, implementing tailored solutions, and continuously refining the platform’s usability and functionality to meet their evolving needs.
+
+We are actively engaging with various partner teams—such as the ITC Hadoop team for technical harvest, the EpiCenter team for both business and technical metadata, and multiple TechADS teams for business metadata, AIT/AIF details, and trend data. Additionally, we are working with the OneHadoop and Hyper Ingestion teams to capture and leverage trend data effectively.
+
+We are collaborating with multiple teams and LOBs to highlight our strategic approach and capabilities within the Data Catalog system. By demonstrating key features, showcasing data discovery tools, and illustrating how effective metadata management can improve overall data governance, we aim to encourage wider adoption and unlock maximum value from our cataloging initiatives.
+
+We have formed a partnership with technology executives to disseminate in-depth knowledge about the Strategic Data Platform (SDP) and to promote the use of DQ4QD and DCM tools. This includes conducting training sessions, developing comprehensive resources, and nurturing a continuous learning environment—ensuring that all stakeholders understand the full potential and advantages of these cutting-edge data solutions.
+
+-----
+Collaborated with multiple teams to design and build the DQ4QD platform, capturing a broad range of requirements and integrating them into a unified solution. This effort has led to the successful onboarding of over 11 teams and more than 1,700 DQ checks, effectively meeting diverse business needs.
+
+Transformed the DQ4QD platform into a self-service solution by automating various operations—such as the migration utility, onboarding procedures, and job tracking—significantly reducing manual intervention and improving overall efficiency.
+
+Enhanced both the user and developer experience by introducing advanced tracking capabilities, refining existing features (including rule version management and DAG versioning), and streamlining the onboarding portal. Additionally, we expanded support to multiple lines of business across DEV, SIT, UAT, and workspace environments, and integrated connectors for Pega, Object Storage, and MongoDB, enabling greater flexibility and scalability.
+
+Successfully completed a proof of concept (POC) for real-time data quality checks on Kafka consumer streaming data, ensuring immediate monitoring, validation, and integrity of high-velocity data streams.
+
+At the start of the year, participated in innovation forums and submitted two proposals aimed at further enhancing our data quality processes and tools, underscoring our ongoing commitment to continuous improvement.
+
+
+------
+We have developed extensive monitoring dashboards for the consumer platform, introducing comprehensive reporting and a range of alerting systems for the DQ4QD platform—such as job execution tracking, file compaction monitoring, and a DQ check dashboard. These enhancements offer real-time visibility and immediate alerts on potential issues, significantly improving overall system reliability.
+
+We have bolstered platform availability and performance by reviewing and fine-tuning the underlying architecture, ensuring that it meets the DQ4QD system’s defined Recovery Time Objectives (RTO) and Recovery Point Objectives (RPO).
+
+We have sustained a zero-data-loss streaming platform that continuously synchronizes data from Kafka to HDFS, and by integrating multiple connectors (including those for RDBMS systems), we have strengthened both data integration and reliability.
+
+We have consistently maintained uninterrupted platform availability for Kafka consumers, DCM, and DQ4QD, ensuring a seamless and reliable experience for all users.
+
+We are currently developing a dedicated user support ticketing and issue resolution system for the DQ4QD platform. This initiative will streamline support processes, accelerate response times, and enhance overall user satisfaction.
+
+
+------
+
+Successfully transitioned the Databank to the DCM system and are now actively promoting user engagement, ensuring a seamless integration and smooth adoption process.
+Thoroughly tested and validated the migration of Tier 0/1 EEH Platform consumers to RHEL 9 bootstrap servers in the pre-production environment, with preparations well underway for a forthcoming production deployment.
+Established the DQ4QD BAU team and a corresponding operating model, and are currently facilitating the transfer of all BAU and operational-level activities to this dedicated group, streamlining processes and responsibilities.
+Developed a robust multi-tenancy framework within the workspace environment, enabling the onboarding of multiple teams using a single DQD Greenzone AIF—this principle applies equally to the production DQ4 AIF, ensuring scalable and efficient resource allocation.
+Successfully upgraded all applications in both BEM and AMO to Spark 3, thereby enhancing performance, compatibility, and long-term maintainability.
+Addressed numerous bugs on the DQ4QD platform, significantly improving user support, platform stability, and overall user experience.
+
+or 
+
+Migrated the Databank to the DCM system and are actively encouraging user adoption to maximize engagement and value.
+Tested and verified the migration of Tier 0/1 EEH Platform consumers to RHEL 9 bootstrap servers in the pre-production environment, with preparations in place for production rollout.
+Established the DQ4QD BAU team and operating model, and are now transitioning all BAU and operational-level responsibilities to this dedicated group.
+Implemented a multi-tenancy framework for the workspace environment, enabling multiple teams to be onboarded using a single DQD Greenzone AIF—this approach also applies to the production DQ4 AIF.
+Successfully upgraded all applications in both BEM and AMO to Spark 3, enhancing performance and future scalability.
+Addressed numerous bugs on the DQ4QD platform, significantly improving user support, stability, and overall experience.
+-------
+
+
+Proactively overseeing all Rise deliverables to ensure timely, high-quality execution, while continuously refining processes to maintain industry-leading standards.
+Anticipating and mitigating potential risks, vulnerabilities, and NPTs by meticulously planning ahead, thereby safeguarding user experiences and maintaining seamless platform stability.
+Implementing a robust, vault-enabled methodology and securely vaulting all service IDs, reinforcing the integrity and resilience of our critical infrastructure.
+Conducting comprehensive EEH ARC testing to strengthen business continuity, enhance system reliability, and affirm our unwavering commitment to operational excellence.
