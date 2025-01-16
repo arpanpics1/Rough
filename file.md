@@ -1,12 +1,12 @@
-Subject: Appreciation for Your Support on the Vault Issue
+Subject: Appreciation for Your Prompt Assistance with Vault Issue
 
-Dear Dinesh,
+Dear Poonam,
 
-I wanted to take a moment to express my sincere gratitude for your prompt availability and support in addressing the vault issue we encountered during the early hours today.
+Thank you for your prompt assistance with the vault issue we were facing, especially during your early morning hours. Your understanding of the problem and swift action in un-vaulting the BEM service ID that was causing the issue is greatly appreciated.
 
-Your proactive approach, dedication to fixing the problem, and persistence in following up with multiple teams were instrumental in resolving the issue efficiently. Your willingness to stay until the matter was completely resolved is highly commendable and greatly appreciated.
+Your support ensured minimal disruption and helped us resolve the problem effectively.
 
-Thank you for your efforts and for being such a reliable team member. Your contribution made a significant difference, and the team greatly values your commitment.
+Thank you once again for your dedication and timely help!
 
 Best regards,
 [Your Name]
